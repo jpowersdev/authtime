@@ -7,6 +7,7 @@
     "scripts": {
         "start": "electron-forge start",
         "package": "electron-forge package",
+        "pub": "electron-forge publish",
         "make": "electron-forge make",
         "lint": "echo \"No linting configured\""
     },
@@ -38,7 +39,7 @@
                 "name": "authtime"
             },
             "windowsStoreConfig": {
-                "packageName": "",
+                "packageName": "nbngroup",
                 "name": "authtime"
             }
         }
@@ -55,6 +56,7 @@
         "babel-plugin-transform-es2015-classes": "^6.23.0",
         "babel-preset-env": "^1.3.2",
         "babel-preset-react": "^6.23.0",
+        "babel-preset-es2017-node7": "^0.5.2",
         "electron-prebuilt-compile": "1.6.2"
     }
 }
