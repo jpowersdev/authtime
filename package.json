@@ -1,0 +1,60 @@
+{
+    "name": "authtime",
+    "productName": "Auth Time",
+    "version": "1.0.0",
+    "description": "A simple application for determining Auth Timelines",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "lint": "echo \"No linting configured\""
+    },
+    "keywords": [],
+    "author": "jpowers",
+    "license": "MIT",
+    "config": {
+        "forge": {
+            "make_targets": {
+                "win32": [
+                    "squirrel"
+                ],
+                "darwin": [
+                    "zip"
+                ],
+                "linux": [
+                    "deb",
+                    "rpm"
+                ]
+            },
+            "electronPackagerConfig": {},
+            "electronWinstallerConfig": {
+                "name": "authtime"
+            },
+            "electronInstallerDebian": {},
+            "electronInstallerRedhat": {},
+            "github_repository": {
+                "owner": "jonpowers",
+                "name": "authtime"
+            },
+            "windowsStoreConfig": {
+                "packageName": "",
+                "name": "authtime"
+            }
+        }
+    },
+    "dependencies": {
+        "electron-compile": "^6.1.3",
+        "electron-devtools-installer": "^2.0.1",
+        "react": "^15.4.1",
+        "react-dom": "^15.4.1",
+        "react-hot-loader": "^3.0.0-beta.6"
+    },
+    "devDependencies": {
+        "babel-plugin-transform-async-to-generator": "^6.22.0",
+        "babel-plugin-transform-es2015-classes": "^6.23.0",
+        "babel-preset-env": "^1.3.2",
+        "babel-preset-react": "^6.23.0",
+        "electron-prebuilt-compile": "1.6.2"
+    }
+}
