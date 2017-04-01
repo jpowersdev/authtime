@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="app.styl" />
+  <link rel="stylesheet" href="bootstrap.css" />
 </head>
 <body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0" >
   <div id="App"></div>
+  <script>window.$ = window.jQuery = require('./jquery.js');</script>
+  <script src="tether.js"></script>
+  <script src="bootstrap.js"></script>
+
 </body>
 
 <script type="text/jsx">
@@ -13,13 +19,14 @@ import ReactDOM from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
 
 const render = () => {
-  const App = require('./app').default;
+  const App = require('./app.jsx').default;
   ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('App'));
 }
 
 render();
 if (module.hot) {
   module.hot.accept(render);
+
 }
 </script>
 </html>
