@@ -3,14 +3,6 @@ const {clipboard} = require('electron');
 
 module.exports = {
 
-	addDays: function(date, days) {
-		var arr = date.split('-');
-		var result = new Date(arr);
-		var ms = days * 24 * 60 * 60 * 1000;
-		result.setTime(result.getTime() + ms);
-		return result;
-	},
-
 	copy: function(data) {
 		clipboard.writeText(String(data));
 	},
@@ -23,15 +15,15 @@ module.exports = {
 			start_array = start_array.map((v) => parseInt(v));
 			var s = new Date(start_array[0], (start_array[1] - 1), start_array[2]);
 
-			console.log('Start ' + s);
+			//console.log('Start ' + s);
 
 			var end_array = end.split('-');
 			end_array = end_array.map((v) => parseInt(v));
 			var e = new Date(end_array[0], (end_array[1] - 1), end_array[2]);
 
-			console.log('End ' + e);
+			//console.log('End ' + e);
 
-			var days = (Math.floor(e - s)/(one_day)) + 1;
+			var days = (Math.floor((e - s)/(one_day))) + 1;
 
 			return days;
 		} else {

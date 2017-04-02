@@ -46,17 +46,18 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
+    var that = this;
     window.addEventListener('keyup', function(e) {
-      if ((e.keyCode || e.which) == 27) {
-        remote.getGlobal('mainWindow').minimize();
-        window.minimize();
+      console.log(e);
+      if ((e.keyCode || e.which) == 13) {
+        that.generateAuth();
       }
     });
   }
 
   render() {
     return (
-    <div className="body" onKeyPress={this.handleKeyPress}>
+    <div className="body">
 		<div className="container-fluid">      
       	
           <div className="row">
