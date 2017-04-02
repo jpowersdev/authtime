@@ -29,6 +29,9 @@
       },
       "electronPackagerConfig": {},
       "electronWinstallerConfig": {
+        "iconUrl": "./src/icon.ico",
+        "setupExe": "AuthTime Setup",
+        "AppDirectory": "NBN Utilities",
         "name": "authtime"
       },
       "electronInstallerDebian": {},
@@ -46,6 +49,7 @@
   "dependencies": {
     "electron-compile": "^6.1.3",
     "electron-devtools-installer": "^2.0.1",
+    "electron-forge": "^2.8.3",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-hot-loader": "^3.0.0-beta.6",
