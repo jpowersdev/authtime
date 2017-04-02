@@ -27,11 +27,22 @@
           "rpm"
         ]
       },
-      "electronPackagerConfig": {},
+      "electronPackagerConfig": {
+        "icon": "src/icon.ico",
+        "asar": "true",
+        "win32metadata": {
+          "CompanyName": "NBN Group",
+          "ProductName": "Auth Time"
+        }
+        },
+      "electronInstallerDMG": {
+        "appPath": "NBN Utilities",
+        "name": "Auth Time",
+        "icon": "src/icon.icns"
+      },
       "electronWinstallerConfig": {
-        "iconUrl": "./src/icon.ico",
-        "setupExe": "AuthTime Setup",
-        "AppDirectory": "NBN Utilities",
+        "iconUrl": "src/icon.ico",
+        "setupExe": "setup.exe",
         "name": "authtime"
       },
       "electronInstallerDebian": {},
