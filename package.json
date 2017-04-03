@@ -1,6 +1,6 @@
 {
   "name": "authtime",
-  "productName": "Auth Time",
+  "productName": "AuthTime",
   "version": "1.0.0",
   "description": "A simple application for determining Auth Timelines",
   "main": "src/index.js",
@@ -30,24 +30,23 @@
       "electronPackagerConfig": {
         "asar": true,
         "quiet": true,
-        "arch": "ia32",
-        "protocol": "authtime://",
         "icon": "./build/icon",
         "win32metadata": {
-          "CompanyName": "NBN Group",
+          "CompanyName": "NBNGroup",
           "ProductName": "Auth Time"
         }
-        },
+      },
       "electronInstallerDMG": {
-        "appPath": "NBN Utilities",
-        "name": "Auth Time",
+        "appPath": "NBNUtilities",
+        "name": "AuthTime",
         "icon": "./build/icon"
       },
       "electronWinstallerConfig": {
         "appDirectory": "./out/AuthTime-win32",
-        "setupIcon": "./build/icon",
-        "iconUrl": "file:./build/icon",
-        "setupExe": "setup.exe"
+        "setupIcon": "./build/icon.ico",
+        "setupExe": "setup.exe",
+        "setupMSI": "setup.msi",
+        "noMsi": false
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
