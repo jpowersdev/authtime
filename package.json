@@ -28,8 +28,11 @@
         ]
       },
       "electronPackagerConfig": {
-        "icon": "src/icon.ico",
-        "asar": "true",
+        "asar": true,
+        "quiet": true,
+        "arch": "ia32",
+        "protocol": "authtime://",
+        "icon": "./build/icon",
         "win32metadata": {
           "CompanyName": "NBN Group",
           "ProductName": "Auth Time"
@@ -38,12 +41,13 @@
       "electronInstallerDMG": {
         "appPath": "NBN Utilities",
         "name": "Auth Time",
-        "icon": "src/icon.icns"
+        "icon": "./build/icon"
       },
       "electronWinstallerConfig": {
-        "iconUrl": "src/icon.ico",
-        "setupExe": "setup.exe",
-        "name": "authtime"
+        "appDirectory": "./out/AuthTime-win32",
+        "setupIcon": "./build/icon",
+        "iconUrl": "file:./build/icon",
+        "setupExe": "setup.exe"
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
@@ -52,8 +56,7 @@
         "name": "authtime"
       },
       "windowsStoreConfig": {
-        "packageName": "nbngroup",
-        "name": "authtime"
+        "packageName": "nbngroup"
       }
     }
   },
